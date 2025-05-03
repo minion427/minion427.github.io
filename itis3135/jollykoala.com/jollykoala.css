@@ -1,0 +1,35 @@
+body{
+    background-color: cadetblue;
+    text-align: center;
+    color:rgb(114, 57, 57);
+    font-family: monospace;
+}
+
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a:hover{
+    color:rgb(228, 103, 128);
+    text-decoration: line;
+}
+
+main{
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2{
+    text-align: center;
+}
+
+img{
+    width: 60%;
+}
+
+figure{
+    text-align: center;
+    font-style: italic;
+}
