@@ -1,0 +1,35 @@
+body{
+    background-color: beige;
+    text-align: center;
+    color:black;
+    font-family: monospace;
+}
+
+a{
+    color: green;
+    text-decoration: none;
+}
+
+a:hover{
+    color:crimson;
+    text-decoration: line;
+}
+
+main{
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2{
+    text-align: center;
+}
+
+img{
+    width: 60%;
+}
+
+figure{
+    text-align: center;
+    font-style: italic;
+}
