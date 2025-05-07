@@ -1,20 +1,4 @@
-// Function to validate the form
-function validateForm() {
-    const form = document.forms['surveyForm'];
-    
-    // Validate required fields
-    for (let i = 0; i < form.elements.length; i++) {
-        const field = form.elements[i];
-        if (field.hasAttribute('required') && !field.value) {
-            alert(`Please fill in the ${field.name}.`);
-            return false; // Prevent form submission if validation fails
-        }
-    }
 
-    // If form passes validation, gather data
-    displayResults();
-    return false; // Prevent form from submitting traditionally
-}
 
 // Function to reset the form
 function resetForm() {
@@ -75,4 +59,22 @@ function displayResults() {
     // Hide form and show results
     document.getElementById('surveyForm').style.display = 'none';
     document.getElementById('surveyResults').style.display = 'block';
+}
+
+// Function to validate the form
+function validateForm() {
+    const form = document.forms['surveyForm'];
+    
+    // Validate required fields
+    for (let i = 0; i < form.elements.length; i++) {
+        const field = form.elements[i];
+        if (field.hasAttribute('required') && !field.value) {
+            alert(`Please fill in the ${field.name}.`);
+            return false; // Prevent form submission if validation fails
+        }
+    }
+
+    // If form passes validation, gather data
+    displayResults();
+    return false; // Prevent form from submitting traditionally
 }

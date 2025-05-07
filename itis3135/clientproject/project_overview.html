@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jiwon Kim's Jolly Koala | ITIS 3135 | Harmony Music Studio Website | Requirements & Design Proposal Webpage</title>
+  <link rel="stylesheet" href="./styles/project_overview.css">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Harmony Music Studio Website</h1>
+    <h2>Requirements & Design Proposal Webpage</h2>
+    <a href="./index.html">Harmony Music Studio</a>
+  </header>
+  <main>
+    <section>
+      <h3>Project Overview</h3>
+      <p>This web application is designed for a newly established local business called <strong>Harmony Music Studio</strong>, which provides private and group music lessons to students of all ages. The website’s purpose is to promote the school, provide information about available classes and events, and allow users to register for lessons online.</p>
+      <p>The intended users of this website include parents of young children, adult learners, and local musicians who want to improve their skills or join a musical community.</p>
+      <p>The website will include five primary pages: Home, About, Classes, Registration, and Events. These pages will provide users with comprehensive information about the studio’s mission, team, available classes, upcoming events, and registration options.</p>
+    </section>
+    <section>
+      <h2>Client Information</h2>
+      <ul>
+        <li><strong>Name of the client:</strong> [Yerin Kim]</li>
+        <li><strong>Organization/Business:</strong> Harmony Music Studio</li>
+        <li><strong>Email:</strong> [private]</li>
+        <li><strong>Phone Number:</strong> [private]</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Wireframe</h3>
+      <figure>
+        <img src="./images/wireframe.png" alt="Homepage Wireframe" style="max-width: 100%; height: auto;">
+        <figcaption>Figure 1: Wireframe of the Harmony Music Studio homepage</figcaption>
+      </figure>
+      <p>Link to editable wireframe: <a href="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&dark=auto#G1jM5NS_a_B0EPrjpjyN9eHsngKLanZAOZ" target="_blank">View on Google Drive</a></p>
+    </section>
+    <section>
+      <h3>Site Map</h3>
+      <figure>
+        <img src="./images/sitemap.png" alt="Website Sitemap" style="max-width: 100%; height: auto;">
+        <figcaption>Figure 2: Sitemap of the Harmony Music Studio Website</figcaption>
+      </figure>
+      <p>Link to editable sitemap: <a href="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&dark=auto#G1-LM2DFwxorrXS-roAkXpmkRbTJsTq_WT" target="_blank">View on Google Drive</a></p>
+    </section>
+    <section>
+      <h3>Page Design</h3>
+      <ul>
+        <li>
+          <strong>index.html (Home)</strong><br>
+          Purpose: Introduce the school and engage users.<br>
+          Audience: General public and prospective students.<br>
+          Content: Hero banner, welcome message, testimonial slider.<br>
+          User Input: No.<br>
+          Validations: N/A.<br>
+          Interactivity: Navigation buttons, testimonial slider.
+        </li>
+        <li>
+          <strong>about.html (About)</strong><br>
+          Purpose: Introduce the founder and mission.<br>
+          Audience: Parents, students.<br>
+          Content: Biography, photos, school values.<br>
+          User Input: No.<br>
+          Validations: N/A.<br>
+          Interactivity: Accordion-style content.
+        </li>
+        <li>
+          <strong>classes.html (Classes)</strong><br>
+          Purpose: Display available music lessons.<br>
+          Audience: Prospective students.<br>
+          Content: List of courses by age/instrument.<br>
+          User Input: No.<br>
+          Interactivity: Filterable course list using dropdowns and AJAX.
+        </li>
+        <li>
+          <strong>registration.html (Registration)</strong><br>
+          Purpose: Allow students to register.<br>
+          Audience: Customers/parents.<br>
+          Content: Registration form.<br>
+          User Input: Yes.<br>
+          Validations: Name, email, instrument, preferred class.<br>
+          Interactivity: JavaScript form validation and confirmation.
+        </li>
+        <li>
+          <strong>events.html (Events)</strong><br>
+          Purpose: Promote upcoming recitals/workshops.<br>
+          Audience: Students, parents, community members.<br>
+          Content: Event dates, descriptions.<br>
+          Interactivity: jQuery UI datepicker, collapsible event descriptions.
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Dynamic Functionality</h2>
+      <p>JavaScript and jQuery will be used to enhance interactivity across the site:</p>
+      <ul>
+        <li><strong>Home page:</strong> Testimonial slider (jQuery plugin).</li>
+        <li><strong>About page:</strong> Accordion for staff bios (jQuery UI).</li>
+        <li><strong>Classes page:</strong> AJAX filtering of class offerings by instrument/age.</li>
+        <li><strong>Registration page:</strong> Form validation using JavaScript.</li>
+        <li><strong>Events page:</strong> jQuery UI Datepicker to view upcoming recitals.</li>
+      </ul>
+      <p>Example Interactivity Inspiration:</p>
+      <ul>
+        <li><a href="https://www.schoolofrock.com/" target="_blank">School of Rock</a></li>
+        <li><a href="https://www.berklee.edu/events" target="_blank">Berklee Events Page</a></li>
+        <li><a href="https://jqueryui.com/accordion/" target="_blank">jQuery UI Accordion Demo</a></li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Harmony Music Studio | <a href="https://validator.w3.org/">HTML Validation</a> | <a href="https://jigsaw.w3.org/css-validator/">CSS Validation</a></p>
+  </footer>
+</body>
+</html>
