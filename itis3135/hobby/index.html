@@ -4,20 +4,348 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jiwon Kim's Jolly Koala | ITIS 3135 | Hobby</title>
-    <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            width: 100%;
+            font-family: sans-serif;
+            overflow-x: hidden;
+            background-color: rgb(100, 122, 106);
+            color: #e8ffdc;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+            width: 100%;
+        }
+        footer {
+            background-color: #273735;
+            height: 5vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(234, 243, 237);
+            margin-top: auto;
+        }
+        .active {
+            padding-top: 10vh;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            text-align: center;
+        }
+        section {
+            width: 75vw;
+            min-height: 50vh;
+            height: auto;
+            display: none;
+            margin: 0 10% 100px 10%;
+        }
+        nav {
+            display: flex;
+            background-color: #203522;
+            flex-direction: row;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            max-height: 10vh;
+            min-height: 10vh;
+            font-size: 25px;
+            position: fixed;
+        }
+        section p {
+            text-align: left;
+            font-size: 20px;
+        }
+        li:not(.li-normal) {
+            font-size: 20px;
+        }
+        .li-normal {
+            text-align: left;
+        }
+        h1 {
+            display: flex;
+            width: 40%;
+            align-items: center;
+            justify-content: center;
+            color: rgb(208, 196, 211);
+        }
+        h2 {
+            font-size: 30px;
+            font-weight: 1500;
+        }
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            justify-content: space-evenly;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+        }
+        a:not(.link-normal) {
+            text-decoration: none;
+            color: rgb(190, 181, 181);
+        }
+        a:hover:not(.link-normal) {
+            background-color: #36a48e;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        table {
+            margin: 0 50px;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        th {
+            border: 1px solid rgb(37, 95, 95);
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: rgb(59, 157, 38);
+        }
+        tr:nth-child(odd) {
+            background-color: rgb(134, 174, 112);
+        }
+        figure img:not(.screenshot) {
+            width: 500px;
+            height: 500px;
+            border-radius: 25px;
+        }
+        .screenshot {
+            width: 300px;
+            border-radius: 25px;
+        }
+        #when div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .link-normal {
+            color: rgb(88, 150, 96);
+            text-decoration: none;
+        }
+        figcaption {
+            font-style: italic;
+            text-align: center;
+        }
+        #how ul {
+            max-width: 400px;
+        }
+        #how {
+            align-items: center;
+            text-align: left;
+        }
+        #how li {
+            padding-bottom: 10px;
+        }
+        #why div {
+            display: grid;
+            grid-template-columns: 50% 25%;
+        }
+        #why li {
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Enjoying Movies & Shows</h1>
+        <nav>
+            <h1>Enjoying Movies & Shows</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li style="color: white;">|</li>
+                <li><a href="#about">About Me</a></li>
+                <li style="color: white;">|</li>
+                <li><a href="#when">Best Memory</a></li>
+                <li style="color: white;">|</li>
+                <li><a href="#where">Best Locations</a></li>
+                <li style="color: white;">|</li>
+                <li><a href="#how">How</a></li>
+                <li style="color: white;">|</li>
+                <li><a href="#why">Why</a></li>
+                <li style="color: white;">|</li>
+                <li><a href="#ai">AI Prompts</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <h2>Hobby</h2>
-        <p>Hello, you've made it to my 3135 Course page</p>
-    </main>
-    <footer>
-        <div data-include="components/footer.html"></div>
-    </footer>
-    <script src="scripts/HTMLInclude.min.js"></script>
+        <section id="home">
+            <h2>Home</h2>
+            <figure>
+                <img src="images/hamiltonticket.jpg" alt="Watching Hamilton the musical with my friends">
+                <figcaption>Watching Hamilton the musical with my friends</figcaption>
+            </figure>
+            <p>I love watching movies, show, musicals, plays, any sorts of artistic to-watch-things. 
+                Although I cannot enjoy musicals as much as I can because of the high price, I save up money to enjoy the shows. I'm also planning to to watch Broadway musicals this summer break.</p>
+            <p>Speaking of movies, it has much less spacial and financial needs to enjoy than musicals or other type of shows. However, sometimes it's hard to focus solely on the movie if I watch it alone in my own room. So I also enjoy going to the movie theatre to 100% focus on the movie.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div style="display: grid;grid-template-columns: 1fr 1fr;">
+                <div>
+                    <p>Hello, I love watching movies, shows, musicals, and all sorts of those artistic plays. 
+                        Someone might think 'Everyone likes watching movie', but I think if it's something that you do to relieve your strees, it can be called hobby.
+                        First, I tried to seek out for more energetic, outgoing hobby, but now I admitted that I love rather more introverted, passive type of activity. Let me introduce you to my hobby life!
+                        </p><br><br>
+                    <p>The best part I love about watching movies especially in the movie theatre is that I can solely focus on the world in the movie, take a break from sometimes harsh reality, and get energy to live my life again.
+                        I especially love Rom-Com movies which makes me laugh, although it's really far from the reality. Speaking of musical and plays is the same in the way that it invites me to another world with totally different stories, character, and settings.
+                        As a kid, I loved reading novels and I think liking movies and plays matches with my personality as a kid.
+                    </p>
+                </div>
+                <div>
+                    <figure>
+                        <img src="images/movieindorm.jpg" alt="Watching Princess Diary in my room" class="screenshot">
+                        <figcaption>Watching 'Princess Diary' in my room</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section id="when">
+            <h2>Best Times</h2>
+            <div>
+                <figure>
+                    <img src="images/hamiltoncharlotte.jpg" alt="Watching Hamilton at the theatre">
+                    <figcaption>Watching Hamilton in the threatre with friends</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/hamilton.jpg" alt="Love it when taking picture of the actor board">
+                    <figcaption>I love it when I take picture of the actor board at the theatre</figcaption>
+                </figure>
+
+            </div>
+            <p>The best time I had recently was when I went to the theatre in Charlotte with my friends to watch the musical 'Hamilton'. Although it's very popular show in the states, it was my first time hearing about it.
+                I think maybe it's because the historical backgrounds of the musical plots, and lots of hiphop-based lyrics that's very difficult to translate in other language, to be performed in other culture.
+                I've watched the movie Hamilton, which is the recording of the broadway show in Disney Plus first, so I could understand the basic plots of it. It was especially special memory to me because my friends explained to me the American backgrounds and cultures in the plot that I couldn't understand.
+            </p>
+            <p>
+                The most interesting part of that musical was that it had lots of fast, hip-hop style rap numbers, and used hip-hop dance battle scene for the arguments.
+                Although it was about political history of United States with main characters mostly consisted with White people, the show intentionally chosen to have actors and actresses in color.
+                Using the unusal dance and number styles, it showed how energetic the historical figures were back in old days. It was interesting that the show made fun of Britain, using King George character as dumb, obsessive chararcter with the states. My friends explained to me that when it comes to historical stories, Americans like to make fun of Britain becasue of the colonization background.
+            </p>
+        </section>
+        <section id="where">
+            <h2>Where</h2>
+            <figure>
+                <img src="images/movieunion.jpg" alt="Movie timelines in student union">
+                <figcaption>Movie schedules in Student Union Theatre</figcaption>
+            </figure>
+            <p>
+                One of the best things about UNC Charlotte that I loved as an movie-lover exchange student, was that it had FREE MOVIE THEATRE in Student Union. Although it had some delays in motions maybe due to the old projects, and sometimes it didn't show the movie on time without workers around, I had amazing experience in the theatre being introduced to many new movies, or watching the movies I loved again.
+            </p>
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Movies I watched in the Student Union Theatre</th>
+                    <th>With whom</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <th>Beetlejuice Beetlejuice</th>
+                    <th>friends - V, Tay</th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th>I Wanna Dance With Somebody</th>
+                    <th>friends - V, Marie</th>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <th>Fly Me to the Moon</th>
+                    <th>friends - V, Marie, Bojana</th>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <th>Kung Fu Panda 4</th>
+                    <th>By myself</th>
+                </tr>
+            </table>
+        </section>
+        <section id="how">
+            <h2>How</h2>
+            <figure>
+                <img src="images/moviefriend.jpg" alt="Watching movie with my friend's TV">
+                <figcaption>Watching movie with my friend's TV</figcaption>
+            </figure>
+            <p>Since I'm an exchange student only for the semester, I didn't have much supplies here. I didn't have TV or big screen, so I liked to borrow projectors, go to my friend's room, or just go to the theatre.
+                I used streaming services like Amazon Video Prime, Disney Plus, Hulu, Netflix, etc. either with my own account or my friend's when I was watching movies with my friends.
+                I don't have much knowledge about the streaming services in America, so let me introduce you to the streaming services in South Korea so maybe you can use it when you come to Korea.
+            </p>
+            <ul>
+                <li>1: Netflix: It's actually the same as you use in the states, but the list of contents you can use might differ.
+                </li>
+                <li>2: Tving: It's good for live streaming shows or Korean TV series.
+                </li>
+                <li>3: Coupang Play: Coupang is like Amazon Shipping service in Korea, and it also has video streaming service like Amazon Video Prime. 
+                    It's known for the live streaming service of sports games. If you have Coupang Wow Membership, you can use this for free.
+                </li>
+                <li>4: Disney Plus: Unlike American Disney Plus membership that usually comes with Hulu membership, we only have single Disney Plus membership. I could use my Disney Plus membership from Korea in US.
+                </li>
+            </ul>
+        </section>
+        <section id="why">
+            <h2>Why</h2>
+            <figure>
+                <img src="images/flymetothemoon.jpg" alt="Fly Me to the Moon: The movie that really gave me comforts when studying abroad">
+                <figcaption>Fly Me to the Moon: The movie that really gave me comforts when studying abroad</figcaption>
+            </figure>
+            <figure>
+                <img src="images/gilmoredorm.jpg" alt="Gilmore Girls: Watching Gilmore Girls after in the dormitory after the final exam week">
+                <figcaption>Gilmore Girls: Watching Gilmore Girls after in the dormitory after the final exam week</figcaption>
+            </figure>
+            <div>
+                <p>Movies and shows has totally different settings, backgrounds, and characters, and invites me to that interesting whole new world.
+                    It gives me comfort when I get so stressed out about my reality, because it helps me to take a look at my life from one step back, like I'm watching the show.
+                    Everything that stressed me out so hard becomes something I can handle, something I can deal with, something that makes me stronger so I can meet the happy ending.
+                    Also, these movies and shows doesn't have language barriers to me, in a sense that I don't have to actually interact with the characters in their language. It's more of passive behavior of just listening, not speaking with them.
+                </p>
+            </div>
+        </section>
+    <section id="ai">
+        <h2>Artificial Intelligence Prompts</h2>
+        <i>All AI prompts I've used were generated using ChatGPT 4o</i>
+        <p>All the images I've used is taken by me.</p>
+        <h2>My Prompt:</h2>
+        <p>What do you think about my html file below?</p>
+        <figure>
+            <img src="images/gptsuggestion1.png" alt="GPT suggestion 1">
+            <img src="images/gptsuggestion2.png" alt="GPT suggestion 2">
+        </figure>
+    </section>
+</main>
+<footer>
+        <p>Midterm Project in <a href="../itis3135/index.html">ITIS 3135</a> | Page Built by <a href="../jkenterprise.org/index.html">JK Enterprises </a>&copy;2025 </p>
+</footer>
+<script>
+        function display() {
+            const active = document.querySelector('.active');
+            const path = window.location.hash;
+            const newActive = document.querySelector(path);
+    
+            if (active) active.classList.remove('active');
+            if (newActive) newActive.classList.add('active');
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash === '') {
+                window.location.hash = '#home';
+            }
+            display();
+        });
+        window.addEventListener('hashchange', display); //
+</script>    
+<!-- <script src="scripts/HTMLInclude.min.js"></script> -->
 </body>
 </html>
