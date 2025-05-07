@@ -36,15 +36,26 @@
                     <li>June 20 - Group Jam Session</li>
                 </ul>
             </div>
-            <div class="block">
+            <!-- <div class="block">
                 <h2>Testimonials</h2>
                 <blockquote>“Harmony Studio helped me rediscover my love for the piano!” – Sarah K.</blockquote>
+            </div> -->
+            <div class="block">
+                <h2 onclick="toggleTestimonials()" style="cursor: pointer;">Testimonials <span id="toggle-arrow">▼</span></h2>
+                <div id="testimonials-content">
+                    <blockquote>“Harmony Studio helped me rediscover my love for the piano!” – Sarah K.</blockquote>
+                </div>
             </div>
+            <div class="block">
+                <h2>Next Event Countdown</h2>
+                <p id="countdown"></p>
+            </div>            
         </section>
     </main>
 
     <footer>
         <p>Contact us: info@harmonymusic.com | 123-456-7890</p>
     </footer>
+    <button id="themeToggle">Toggle Theme</button>
 </body>
 </html>
