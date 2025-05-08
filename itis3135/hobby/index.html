@@ -119,15 +119,22 @@
         tr:nth-child(odd) {
             background-color: rgb(134, 174, 112);
         }
+
         figure img:not(.screenshot) {
-            width: 500px;
-            height: 500px;
-            border-radius: 25px;
+        max-width: 45%;
+        height: auto;
+        border-radius: 25px;
+        display: block;
+        margin: 0 auto;
         }
         .screenshot {
-            width: 300px;
-            border-radius: 25px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 25px;
+        display: block;
+        margin: 0 auto;
         }
+
         #when div {
             display: flex;
             flex-direction: row;
@@ -158,6 +165,17 @@
         #why li {
             padding: 5px;
         }
+        .left-heading {
+        text-align: left;
+        }
+        #ai figure img {
+        max-width: 45%;
+        height: auto;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+
     </style>
 </head>
 <body>
@@ -303,7 +321,7 @@
                 <figcaption>Fly Me to the Moon: The movie that really gave me comforts when studying abroad</figcaption>
             </figure>
             <figure>
-                <img src="images/gilmoredorm.jpg" alt="Gilmore Girls: Watching Gilmore Girls after in the dormitory after the final exam week">
+                <img src="images/gilmoredorm.jpg" alt="Gilmore Girls: Watching Gilmore Girls in the dormitory after the final exam week">
                 <figcaption>Gilmore Girls: Watching Gilmore Girls after in the dormitory after the final exam week</figcaption>
             </figure>
             <div>
@@ -318,7 +336,7 @@
         <h2>Artificial Intelligence Prompts</h2>
         <i>All AI prompts I've used were generated using ChatGPT 4o</i>
         <p>All the images I've used is taken by me.</p>
-        <h2>My Prompt:</h2>
+        <h2 class="left-heading">My Prompt:</h2>
         <p>What do you think about my html file below?</p>
         <figure>
             <img src="images/gptsuggestion1.png" alt="GPT suggestion 1">
