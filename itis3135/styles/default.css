@@ -25,11 +25,13 @@ a:hover{
 }
 
 main{
-    text-align: center;
-    max-width: 1200px;
+    flex: 1;
     width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
+
 
 h2{
     text-align: center;
@@ -44,41 +46,50 @@ figure{
     font-style: italic;
 }
 
-form {
-    background-color: #f8f8e7;
-    padding: 20px;
-    margin: 20px auto;
-    border: 2px solid #ccc;
+/* Adjusted img styling to ensure images are appropriately sized */
+img {
+    width: 100%; /* Ensure images fill the container */
+    max-width: 400px; /* Set a maximum width to avoid images being too large */
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the images */
+    margin-top: 10px; /* Space from other content */
+}
+
+/* Specific styling for image preview (before form submission) */
+#loadImage img {
+    max-width: 300px; /* Limit preview size */
+    margin-top: 20px; /* Add some space above the preview image */
     border-radius: 8px;
-    max-width: 500px;
-    text-align: left;
 }
 
-input, select {
-    width: 100%;
-    /* padding: 10px; */
-    margin-top: 6px;
-    margin-bottom: 12px;
-    /* border: 1px solid #888; */
-    border-radius: 4px;
-    font-size: 1rem;
+/* Styling for the intro result section after submission */
+#output img {
+    max-width: 300px; /* Limit submitted image size */
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px; /* Add space from other elements */
 }
 
-input[type="submit"], input[type="reset"] {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    cursor: pointer;
-    border-radius: 4px;
+/* Fix spacing in the form */
+#intro-form label {
+    margin-bottom: 1.5em; /* More space between form elements */
 }
 
-input[type="submit"]:hover, input[type="reset"]:hover {
-    background-color: #555;
+#intro-form input, #intro-form textarea {
+    margin-bottom: 1em; /* Space between inputs */
 }
 
-label, legend {
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
+#intro-form input[type="submit"], #intro-form input[type="reset"] {
+    background-color: #58c3c7;
+    padding: 0.8em 1.5em; /* Increase padding for buttons */
+}
+
+/* Make sure the courses list looks good */
+#intro-form #courses-section {
+    margin-top: 1em; /* Space between form fields */
+}
+
+/* Add some extra space after the submit button */
+#intro-form input[type="submit"] {
+    margin-top: 20px;
 }

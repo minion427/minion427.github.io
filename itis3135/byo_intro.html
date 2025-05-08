@@ -12,74 +12,91 @@
         <div data-include="./components/header.html"></div>
     </header>
     <main>
-        <h2>BYO Intro</h2>
+        <h2 class="byo-head">Build Your Own Introduction</h2>
         <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
-        <form id="byoform" onsubmit="return validateForm">
-            <fieldset>
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name" value="Jiwon Kim" required>
-                <br>
-    
-                <label for="mascot">Mascot:</label>
-                <input type="text" id="mascot" name="mascot" value="Jolly Koala" required>
-                <br>
-    
-                <label for="image">Image (PNG or JPG):</label>
-                <input type="file" id="image" name="image" accept=".png, .jpg" required>
-                <br>
-    
-                <label for="imageCaption">Image Caption:</label>
-                <input type="text" id="imageCaption" name="imageCaption" value="/images/koala.png" required>
-                <br>
-    
-                <label for="personalbackground">Personal Background:</label>
-                <input type="text" id="personalbackground" name="personalbackground" value="This semester is my first time in Charlotte" required>
-                <br>
-    
-                <label for="professionalbackground">Professional Background:</label>
-                <input type="text" id="professionalbackground" name="professionalbackground" value="Computer Science Student" required>
-                <br>
-    
-                <label for="academicbackground">Academic Background:</label>
-                <input type="text" id="academicbackground" name="academicbackground" value="I'm doing my exchange semester here" required>
-                <br>
-    
-                <label for="webbackground">Background in Web Development:</label>
-                <input type="text" id="webbackground" name="webbackground" value="I don't have much experience in web development" required>
-                <br>
-    
-                <label for="platform">Primary Computer Platform:</label>
-                <input type="text" id="platform" name="platform" value="Windows 10pro" required>
-                <br>
-    
-                <label for="course">Courses Currently Taking:</label>
-                <div id="courseslist">
-                <input type="text" id="course" name="course" placeholder="Enter your course name" required>
-                <button type="button" onclick="addCourse()">Add Another Course</button>
-                </div>
-    
-                <label for="funnyThing">Funny Thing:</label>
-                <input type="text" id="funnyThing" name="funnyThing" value="Koalas are the best dancers!" required>
-                <br>
-    
-                <label for="anythingElse">Anything Else?</label>
-                <input type="text" id="anythingElse" name="anythingElse" value="Just enjoy coding!" required>
-                <br>
-    
-                <label for="agree">
-                <input type="checkbox" id="agree" name="agree" required>
-                I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
-                </label>
-                <br>
-    
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset" onclick="resetForm()">
-            </fieldset>
+        <form id="intro-form">
+            <label>
+                Name    
+                <input type="text" id="name" name="name" required value="Jiwon Kim">
+            </label> <br><br>
+
+            <label>
+                Mascot
+                <input type="text" id="mascot" name="mascot" required value="Jolly Koala">
+            </label> <br><br>
+
+            <label>
+                Image 
+                <input type="file" id="image" name="image" accept=".png, .jpg, .jpeg" required onchange="loadImage()">
+            </label> <br><br>
+
+            <!-- Image preview before submission -->
+            <div id="loadImage"></div>
+
+            <label>
+                Caption
+                <input type="text" id="caption" name="caption" required value="first time entering US airport for exchange period">
+            </label> <br><br>
+
+            <label>
+                Personal Background
+                <input type="text" id="personal" name="personal" required value="I’m an exchange student from South Korea for this semester.">
+            </label> <br><br>
+
+            <label>
+                Professional Background
+                <input type="text" id="professional" name="professional" required value="I’ve tutored Korean SAT for high school senior, worked as a RA at my home university.">
+            </label> <br><br>
+
+            <label>
+                Academic Background
+                <input type="text" id="academic" name="academic" required value="Senior">
+            </label> <br><br>
+
+            <label>
+                Background in Web Development
+                <input type="text" id="webdevbackground" name="webdevbackground" required value="I never used html, css, js before but have experience in Python, C, and C++. More focused on the theoretical part of Computer Science, but it’s really time to focus on programming.">
+            </label> <br><br>
+
+            <label>
+                Primary Computer Platform
+                <input type="text" id="platform" name="platform" required value="My Windows laptop">
+            </label> <br><br>
+
+            <div id="courses-section">
+                <label>
+                    Courses currently taking
+                </label><br>
+                <button type="button" id="add-course">Add Course</button>
+            </div><br>
+
+            <label>
+                Funny thing?
+                <input type="text" id="funny" name="funny" required value="If you have a hard time pronouncing my name, you can think of it as g1.">
+            </label> <br><br>
+
+            <label>
+                Anything Else?
+                <input type="text" id="anything" name="anything" required value="N/A">
+            </label> <br><br>
+
+            <label>
+                <input type="checkbox" id="agreement" name="agreement" required checked>
+                I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.
+            </label> <br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
         </form>
+
+        <!-- This is where the output after submission will be shown -->
+        <div id="output"></div>
     </main>
+    
     <footer>
         <div data-include="components/footer.html"></div>
     </footer>
+    
     <script src="scripts/HTMLInclude.min.js"></script>
     <script src="scripts/survey.js"></script>
 </body>
