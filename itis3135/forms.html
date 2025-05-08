@@ -3,17 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jiwon Kim's Jolly Koala | ITIS3135 | Forms </title>
+    <title>Jiwon Kim's Jolly Koala | ITIS 3135 | Forms</title>
+    <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <div data-include="components/header.html"></div>
+        <div data-include="./components/header.html"></div>
     </header>
     <main>
         <h2>Forms</h2>
-        <p>Forms Assignment content here</p>
+        <form action="#" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required placeholder="Enter your name"><br><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" required placeholder="704-456-7890"><br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required placeholder="mailaddress@gmail.com"><br><br>
+
+            <fieldset>
+                <legend>Which classes are you interested in?</legend>
+                <input type="checkbox" id="piano" name="class" value="Piano">
+                <label for="piano">Piano</label><br>
+                <input type="checkbox" id="guitar" name="class" value="Guitar">
+                <label for="guitar">Guitar</label><br>
+                <input type="checkbox" id="singing" name="class" value="Singing">
+                <label for="singing">Singing</label>
+            </fieldset><br>
+
+            <fieldset>
+                <legend>Preferred Format:</legend>
+                <input type="radio" id="online" name="format" value="Online" required>
+                <label for="online">Online</label><br>
+                <input type="radio" id="inperson" name="format" value="In-Person">
+                <label for="inperson">In-Person</label>
+            </fieldset><br>
+
+            <label for="experience">Experience Level:</label><br>
+            <select id="experience" name="experience" required>
+                <option value="">Select level</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select><br><br>
+
+            <input type="reset" value="Reset Form">
+            <input type="submit" value="Submit Form">
+        </form>
     </main>
+
     <footer>
         <div data-include="components/footer.html"></div>
     </footer>
