@@ -1,75 +1,97 @@
+/* Slideshow container setup */
 .slideshow-container {
-    position: relative;
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  .mySlides {
-    display: none;
-  }
-  
-  img {
-    vertical-align: middle;
-  }
-  
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  .text {
-    color: #f2f2f2;
-    font-size: 18px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-  
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
-    user-select: none;
-    transition: 0.6s ease;
-    background-color: rgba(0,0,0,0.3);
-  }
-  
-  .next {
-    right: 0;
-  }
-  
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  .row {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  
-  .column {
-    flex: 0 0 auto;
-    width: 100px;
-    margin: 0 4px;
-  }
-  
-  .demo {
-    opacity: 0.6;
-  }
-  
-  .active, .demo:hover {
-    opacity: 1;
-  }
-  
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden; /* Ensures that no overflow happens when the slides transition */
+}
+
+/* Hidden slides by default */
+.mySlides {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+/* Style for all images */
+img {
+  vertical-align: middle;
+  width: 100%; /* Ensures images take up the full width of the container */
+}
+
+/* Number text style */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Text overlay on image */
+.text {
+  color: #f2f2f2;
+  font-size: 18px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Previous and next buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  user-select: none;
+  transition: 0.6s ease;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%; /* Makes the buttons round */
+  z-index: 1; /* Ensures buttons are on top of the images */
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Row for thumbnail images */
+.row {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Column for individual thumbnails */
+.column {
+  flex: 0 0 auto;
+  width: 100px;
+  margin: 0 4px;
+  padding: 4px; /* Adds space around the thumbnails */
+}
+
+/* Thumbnail images styling */
+.demo {
+  opacity: 0.6;
+  cursor: pointer;
+  border-radius: 5px; /* Optional: adds rounded corners for thumbnails */
+  transition: opacity 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+.active, .demo:hover {
+  opacity: 1;
+}
